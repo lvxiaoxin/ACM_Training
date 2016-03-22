@@ -1,0 +1,27 @@
+
+
+void dfs(int it)
+{
+	if(count==N) return;
+	for(int i=1; i<=N; i++)
+	{
+		if(M[it][i]!=1 && it!=i && g[i]==0)
+		{
+			g[i]=color;
+			count++;
+		}
+	}
+	while(1)
+	{
+		it++;
+		if(g[it]!=0) continue;
+	}
+	color++;
+	dfs(it);
+}
+
+
+color = 1;
+count = 1;
+g[1] = color;
+dfs(1);

@@ -1,8 +1,11 @@
 #clion plugin
 .idea
+.swp
+*.txt
 
 #thinking
 .doc
 .txt
 .rhf
 .rhfd
+
