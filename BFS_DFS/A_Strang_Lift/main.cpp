@@ -1,3 +1,7 @@
+/**
+ * name: A strange lift.
+ * P_ID: HDU 1548
+ */
 #include <cstdio>
 #include <queue>
 using namespace std;
