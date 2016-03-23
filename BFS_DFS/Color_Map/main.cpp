@@ -1,3 +1,7 @@
+/**
+ *name: channel allocation
+ *P_ID : bnuoj 8419
+ */
 #include <cstdio>
 #include <cstring>
 #include <algorithm>
@@ -75,4 +79,8 @@ int main()
         scanf("%d", &N);
     }
     return 0;
+
+
+
+
 }
