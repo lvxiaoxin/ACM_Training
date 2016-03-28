@@ -1,3 +1,7 @@
+/**
+ * name :Find The Multiple
+ * P_ID: bnuoj 1545
+ */
 #include<iostream>
 #include<cmath>
 #include<queue>
