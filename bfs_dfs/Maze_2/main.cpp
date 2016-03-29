@@ -13,6 +13,7 @@ int dir[][2] = {{-1,0}, {0, 1}};
 char str[101][101];
 bool vis[101][101];
 
+
 bool easyGo(int x, int y)
 {
     if(x>=0 && y>=0 && x<N && y<M && str[x][y]!='*' && !vis[x][y])
@@ -28,24 +29,6 @@ void dfs(int x, int y)
         num %= 1908;
         return;
     }
-    /*
-    for(int i=0; i<2; i++)
-    {
-        int temp_x, temp_y;
-        temp_x = a.x + dir[i][0];
-        temp_y = a.y + dir[i][1];
-   //     cout << temp_x << " " << temp_y << "  temp" << endl;
-        if(easyGo(temp_x, temp_y))
-        {
-            pan next;
-            next.x = temp_x;
-            next.y = temp_y;
-            vis[temp_x][temp_y] = true;
-            dfs(next);
-            vis[temp_x][temp_y] = false;
-        }
-    }
-     */
 
     if(easyGo(x-1, y))
     {

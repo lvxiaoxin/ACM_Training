@@ -9,3 +9,5 @@
 .rhf
 .rhfd
 
+#program
+*.out
