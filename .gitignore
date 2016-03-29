@@ -1,6 +1,5 @@
 #clion plugin
 .idea
-.swp
 *.txt
 
 #thinking
@@ -11,3 +10,7 @@
 
 #program
 *.out
+
+#others
+*.swp
+.*.swp
