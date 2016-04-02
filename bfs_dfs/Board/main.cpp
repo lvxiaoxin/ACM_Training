@@ -1,5 +1,4 @@
 /**
- *
  * name: Board problem
  * P_ID: 1440
  */
@@ -44,7 +43,6 @@ int main()
         /*
         for(int i=0; i<n; i++)
             scanf("%s", str[i]);
-
         */
         getchar();
         for(int i=0; i<n; i++)
