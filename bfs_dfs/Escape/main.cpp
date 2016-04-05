@@ -1,3 +1,8 @@
+/**
+ * name: Escape
+ * P_ID: BNUOJ 49278
+ * date:
+ */
 #include <cstdio>
 #include <iostream>
 #include <cstring>
@@ -31,9 +36,9 @@ bool bfs(int x, int y)
         if(str[temp.x][temp.y]=='E') return true;
         for(int i=0; i<4; ++i)
         {
-            int xx = x + dir[i][0];
-            int yy = y + dir[i][1];
-            if(str[xx][yy]=='.' && vis[xx][yy]==0)
+            int xx = temp.x + dir[i][0];
+            int yy = temp.y + dir[i][1];
+            if(xx>=0 && xx<N && yy>=0 && yy<M && str[xx][yy]!='#' && vis[xx][yy]==0 && str[xx][yy]!='!')
             {
                 maze next;
                 next.x = xx;
@@ -45,18 +50,27 @@ bool bfs(int x, int y)
         for(int i=0; i<N; ++i)
         {
             for(int j=0; j<M; ++j)
-                if(str[i][j]=='!')
+            {
+                if(str[i][j]=='!' && vis[i][j]==0)
                 {
                     for(int k=0; k<4; k++)
                     {
-                        int xx = i + dir[i][0];
-                        int yy = j + dir[i][1];
-                        if(xx>=0 && xx<N && yy>=0 && yy<M && str[xx][yy]=='.')
+                        int xx = i + dir[k][0];
+                        int yy = j + dir[k][1];
+                        if(xx>=0 && xx<N && yy>=0 && yy<M && str[xx][yy]!='#' && str[xx][yy]!='!')
                         {
-                            str[i][j] = '!';
+                            str[xx][yy] = '!';
+                            if( (xx>i) || (xx==i && yy>j) )
+                                vis[xx][yy] = 2;
                         }
                     }
+                    str[i][j] = '#';
                 }
+                if(str[i][j]=='!' && vis[i][j]==2)
+                {
+                    vis[i][j] = 0;
+                }
+            }
         }
     }
     return false;
