@@ -5,77 +5,100 @@
  */
 #include <cstdio>
 #include <iostream>
-#include <cstring>
 #include <queue>
+#include <cstring>
 using namespace std;
 
+int dir[4][2] = {{1,0}, {-1,0}, {0,-1}, {0,1}};
 char str[1005][1005];
-int dir[][2] = {{1,0}, {-1,0}, {0,1}, {0,-1}};
-int vis[1005][1005];
+bool vis[1005][1005];
+int dis[1005][1005];
 int N, M;
 int x, y;
+int ex, ey;
+const int inf = 0x3f3f3f3f;
 
 struct maze {
     int x;
     int y;
+    int t;
 };
 
+bool judge(maze now)
+{
+    int a = now.x;
+    int b = now.y;
+    if(a<0 || a>=N || b<0 || b>=M) return false;
+    return true;
+}
+
+void bfs_hot()
+{
+    queue<maze> myHot;
+    for(int i=0; i<N; ++i)
+    {
+        for(int j=0; j<M; ++j)
+        {
+            if(str[i][j]=='!')
+            {
+                dis[i][j] = 0;
+                maze temp;
+                temp.x = i;
+                temp.y = j;
+                temp.t = 0;
+                myHot.push(temp);
+            }
+        }
+    }
+
+    while(!myHot.empty())
+    {
+        maze temp = myHot.front();
+        myHot.pop();
+        for(int i=0; i<4; ++i)
+        {
+            maze next;
+            next.x = temp.x + dir[i][0];
+            next.y = temp.y + dir[i][1];
+            next.t = temp.t + 1;
+            if(judge(next) && next.t<dis[next.x][next.y])
+            {
+                dis[next.x][next.y] = next.t;
+                myHot.push(next);
+            }
+        }
+    }
+}
 
 bool bfs(int x, int y)
 {
-    maze first;
+    queue<maze> myPath;
+    maze first, next;
     first.x = x;
     first.y = y;
-    queue<maze> myPath;
+    first.t = 0;
     myPath.push(first);
     while(!myPath.empty())
     {
-        maze temp;
-        temp = myPath.front();
+        maze temp = myPath.front();
         myPath.pop();
-        if(str[temp.x][temp.y]=='E') return true;
+        if(temp.x==ex && temp.y==ey) return true;
         for(int i=0; i<4; ++i)
         {
-            int xx = temp.x + dir[i][0];
-            int yy = temp.y + dir[i][1];
-            if(xx>=0 && xx<N && yy>=0 && yy<M && str[xx][yy]!='#' && vis[xx][yy]==0 && str[xx][yy]!='!')
+            next.x = temp.x + dir[i][0];
+            next.y = temp.y + dir[i][1];
+            next.t = temp.t + 1;
+            if(judge(next) && next.x==ex && next.y==ey && (next.t<=dis[next.x][next.y]))
+                return true;
+            if(!vis[next.x][next.y] && judge(next) && next.t<dis[next.x][next.y])
             {
-                maze next;
-                next.x = xx;
-                next.y = yy;
-                vis[xx][yy] = 1;
+                vis[next.x][next.y] = 1;
                 myPath.push(next);
-            }
-        }
-        for(int i=0; i<N; ++i)
-        {
-            for(int j=0; j<M; ++j)
-            {
-                if(str[i][j]=='!' && vis[i][j]==0)
-                {
-                    for(int k=0; k<4; k++)
-                    {
-                        int xx = i + dir[k][0];
-                        int yy = j + dir[k][1];
-                        if(xx>=0 && xx<N && yy>=0 && yy<M && str[xx][yy]!='#' && str[xx][yy]!='!')
-                        {
-                            str[xx][yy] = '!';
-                            if( (xx>i) || (xx==i && yy>j) )
-                                vis[xx][yy] = 2;
-                        }
-                    }
-                    str[i][j] = '#';
-                }
-                if(str[i][j]=='!' && vis[i][j]==2)
-                {
-                    vis[i][j] = 0;
-                }
             }
         }
     }
     return false;
 }
-
 
 int main()
 {
@@ -84,20 +107,32 @@ int main()
     while(T--)
     {
         memset(vis, 0, sizeof(vis));
+        memset(dis, inf, sizeof(dis));
         scanf("%d%d", &N, &M);
         for(int i=0; i<N; i++)
             scanf("%s", str[i]);
 
         for(int i=0; i<N; ++i)
             for(int j=0; j<M; j++)
+            {
                 if(str[i][j]=='S')
                 {
                     x = i;
                     y = j;
                 }
-        vis[x][y] = 1;
-        if(bfs(x, y)) printf("YES\n");
-        else printf("NO\n");
+                if(str[i][j]=='#')
+                {
+                    dis[i][j] = 0;
+                }
+                if(str[i][j]=='E')
+                {
+                    ex = i;
+                    ey = j;
+                }
+            }
+        bfs_hot();
+        if(bfs(x, y)) printf("Yes\n");
+        else printf("No\n");
     }
     return 0;
 }
