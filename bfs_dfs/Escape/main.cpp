@@ -1,7 +1,7 @@
 /**
  * name: Escape
  * P_ID: BNUOJ 49278
- * date:
+ * date:2014-04-05
  */
 #include <cstdio>
 #include <iostream>
@@ -88,9 +88,9 @@ bool bfs(int x, int y)
             next.x = temp.x + dir[i][0];
             next.y = temp.y + dir[i][1];
             next.t = temp.t + 1;
-            if(judge(next) && next.x==ex && next.y==ey && (next.t<=dis[next.x][next.y]))
+            if(judge(next) && next.x==ex && next.y==ey && (next.t<=dis[next.x][next.y]))//终点处就算同时到达也算作Yes
                 return true;
-            if(!vis[next.x][next.y] && judge(next) && next.t<dis[next.x][next.y])
+            if(!vis[next.x][next.y] && judge(next) && next.t<dis[next.x][next.y])//中间过程
             {
                 vis[next.x][next.y] = 1;
                 myPath.push(next);
@@ -107,6 +107,7 @@ int main()
     while(T--)
     {
         memset(vis, 0, sizeof(vis));
+        //配合之后的'#'变更，使得所有岩浆可到达点的dis初始都是inf
         memset(dis, inf, sizeof(dis));
         scanf("%d%d", &N, &M);
         for(int i=0; i<N; i++)
@@ -120,6 +121,7 @@ int main()
                     x = i;
                     y = j;
                 }
+                //用来标记，之后传播岩浆遇到'#'会受阻
                 if(str[i][j]=='#')
                 {
                     dis[i][j] = 0;
