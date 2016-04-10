@@ -1,3 +1,10 @@
+/**
+ *
+ * name: Victor Escape
+ * P_ID: BNUOJ 5453
+ * date: 2016-04-10
+ *
+ */
 #include <cstdio>
 #include <cmath>
 #include <cstring>
