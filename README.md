@@ -29,6 +29,7 @@ Topic1 bfs & dfs
 
     13. HDU 1495 --- complicate bfs
 
+    14. HDU 2102 --- 3 dimission bfs not complicate
    
 
 Topic2 dp
