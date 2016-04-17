@@ -1,7 +1,7 @@
 /**
  * name: Pushing box
  * p_id: POJ 1475
- * date: 2016-04-16
+ * date: 2016-04-17
  * note: 嵌套bfs,双重bfs
  */
 #include <cstring>
