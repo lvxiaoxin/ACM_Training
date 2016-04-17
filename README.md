@@ -33,6 +33,10 @@ Topic1 bfs & dfs
    
     15. HDU 2612 --- a complicate bfs
 
+    16. UVA 532 --- basic 3 dimensions bfs
+
+    17. POJ 1475 --- double bfs， nest bfs
+
 Topic2 dp
 
     1. BNU 1055 --- basic dp, mistake for dfs
