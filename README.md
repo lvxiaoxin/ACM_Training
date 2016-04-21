@@ -37,6 +37,10 @@ Topic1 bfs & dfs
 
     17. POJ 1475 --- double bfs， nest bfs
 
+    18. ZOJ 2913 --- Basic bfs, but difficult, so many dates
+
+    19. POJ 1167 --- dfs + dificult modelling + pruing (like POJ 1190)
+
 Topic2 dp
 
     1. BNU 1055 --- basic dp, mistake for dfs
