@@ -1,3 +1,7 @@
+/**
+ *method: dfs 深搜
+ *note： TLE    
+ */
 #include <cstdio>
 #include <algorithm>
 #include <string>
@@ -134,15 +138,7 @@ int main()
                 {
                     int tx = ansPath[i].x;
                     int ty = ansPath[i].y;
-                    int tmp = (int)maze[ansPath[i].x][ansPath[i].y] - 48;
-                    /*
-                    while (tmp--)
-                    {
-                        printf("%ds:FIGHT AT (%d,%d)\n", i+1, tx, ty);
-                        i++;
-                    }
-                    printf("%ds:(%d,%d)->(%d,%d)\n", i+1, ansPath[i-1].x, ansPath[i-1].y, ansPath[i].x, ansPath[i].y);
-                     */
+        //            int tmp = (int)maze[ansPath[i].x][ansPath[i].y] - 48;
 
                     printf("%ds:FIGHT AT (%d,%d)\n", tim, tx, ty);
                     ff = 1;

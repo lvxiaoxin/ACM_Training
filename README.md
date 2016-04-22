@@ -41,6 +41,8 @@ Topic1 bfs & dfs
 
     19. POJ 1167 --- dfs + dificult modelling + pruing (like POJ 1190)
 
+    20. HDU 1026 --- priority_bfs + stack     difficult
+
 Topic2 dp
 
     1. BNU 1055 --- basic dp, mistake for dfs
