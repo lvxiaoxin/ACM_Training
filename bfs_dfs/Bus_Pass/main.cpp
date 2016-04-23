@@ -26,7 +26,6 @@ struct ans {
 void bfs(int i)
 {
  //       printf("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
-    k = 0;
     memset(vis, 0, sizeof(vis));
     queue<ans> myAns;
     ans first;
@@ -49,7 +48,6 @@ void bfs(int i)
                 myAns.push(next);
                 edge[next.i][k] = next.star;
  //               printf("%d   %d   %d\n", next.i, next.star, i);
-                k++;
             }
         }
     }
@@ -88,6 +86,7 @@ int main()
             {
                 scanf("%d", &tripPath[i][j]);
                 bfs(tripPath[i][j]);
+                k++;
             }
         }
 
@@ -108,6 +107,7 @@ int main()
                 ansStar = edge[fillC[i]][0];
                 ansID = fillC[i];
             }
+            if(ansStar==edge[fillC[i]][0] && ansID>fillC[i])
             {
                 ansID = fillC[i];
             }

@@ -41,7 +41,9 @@ Topic1 bfs & dfs
 
     19. POJ 1167 --- dfs + dificult modelling + pruing (like POJ 1190)
 
-    20. HDU 1026 --- priority_bfs + stack     difficult
+    20. HDU 1026 --- priority_queue + stack    bfs  difficult
+
+    21. ZOJ 2913 --- Graphic theory + bfs + many date
 
 Topic2 dp
 
