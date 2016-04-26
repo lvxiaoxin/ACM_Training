@@ -45,6 +45,8 @@ Topic1 bfs & dfs
 
     21. ZOJ 2913 --- Graphic theory + bfs + many date
 
+    22. POJ 3635 --- priority queue difficult 
+
 Topic2 dp
 
     1. BNU 1055 --- basic dp, mistake for dfs

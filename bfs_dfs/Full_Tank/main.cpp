@@ -1,3 +1,8 @@
+/**
+ * name: Full Tank?
+ * P_ID: POJ 3635
+ * method: priority queue + date deal 
+ */
 #include <cstdio>
 #include <cstring>
 #include <iostream>
@@ -11,64 +16,102 @@
 #include <cmath>
 #include <cstdlib>
 #include <ctime>
-#include <utility>
 using namespace std;
 typedef long long ll;
 const int MOD = 1e9 + 7;
 const int MAXN = 1e5 + 3;
 
+
 int n, m;
-int price[1050];
-int edge[1050][1050];
-int vis[1050];
-int q;
-int capacity;
-int sx;
-int sy;
-int u, v, x;
-
-#define pii pair<int,int>
-vector< pii > Map[1050];
-
+int ans;
+int price[1005];
+int vis[1005][105];
+struct road {
+    int goal;
+    int dis;
+    road(int a, int b)
+    {
+        goal = a;
+        dis = b;
+    }
+};
+vector<road> cityR[1005]; 
+int q, c, s, e;
 
 struct node {
-    int now;
     int vol;
+    int city;
     int cost;
+    node(int a, int b, int c)
+    {
+        vol = a;
+        city = b;
+        cost = c;
+    }
+    bool operator < (node b) const
+    {
+        return cost > b.cost;
+    }
 };
 
 
-void bfs_dis(int VOL, int be, int en)
+int bfs(int cap, int sta, int end)
 {
     memset(vis, 0, sizeof(vis));
-    vis[sx] = 1;
+    node first(0, sta, 0);
+    priority_queue<node> myNode;
+    myNode.push(first);
+    while(!myNode.empty())
+    {
+        node now = myNode.top();
+        myNode.pop();
+ //       cout << "***"  << now.city << "city" << endl;
+        int x = now.city;
+        int y = now.vol;
+        int z = now.cost;
+        if(now.city==end) 
+            return now.cost;
+        vis[now.city][now.vol] = 1;
+        if(now.vol<cap)
+            myNode.push(node(y+1, x, z+price[x]));
+ //       cout << cityR[now.city].size() << "---"<< endl;
+        for(int i=0; i<cityR[now.city].size(); ++i)
+        {
+            int g = cityR[now.city][i].goal;
+            int d = cityR[now.city][i].dis;
+            if(now.vol>=d && !vis[g][now.vol-d])
+            {
+                myNode.push(node(now.vol-d, g, now.cost));
+            }
+        }
+    }
+    return -1;
 }
 
 
 int main()
 {
-    memset(edge, 0, sizeof(edge));
+    ans = 0;
     memset(price, 0, sizeof(price));
-	scanf("%d%d", &n, &m);
+    scanf("%d%d", &n, &m);
     for(int i=0; i<n; ++i)
-    {
         scanf("%d", &price[i]);
-    }
     for(int i=0; i<m; ++i)
     {
-        scanf("%d%d%d", &u, &v, &x);
-        Map[v].push_back( pii(v, x) );
-        Map[x].push_back( pii(x, v) );
-
+        int a, b, c;
+        scanf("%d%d%d", &a, &b, &c);
+        cityR[a].push_back(road(b,c));
+        cityR[b].push_back(road(a,c));
     }
     scanf("%d", &q);
     for(int i=0; i<q; ++i)
     {
-        scanf("%d%d%d", &capacity, &sx, &sy);
-        bfs_dis(capacity, sx, sy);
+        scanf("%d%d%d", &c, &s, &e);
+        ans = bfs(c, s, e);
+        if(ans==-1)
+            printf("impossible\n");
+        else printf("%d\n", ans);
     }
 
-
-   
 	return 0;
 }
