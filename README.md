@@ -47,6 +47,8 @@ Topic1 bfs & dfs
 
     22. POJ 3635 --- priority queue difficult 
 
+    23. POJ 1324 --- bfs + status memory + bit operation
+
 Topic2 dp
 
     1. BNU 1055 --- basic dp, mistake for dfs
