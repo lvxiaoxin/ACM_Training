@@ -53,6 +53,7 @@ Topic2 dp
 
     1. BNU 1055 --- basic dp, mistake for dfs
 
+    2. BNU 4183 --- basic 0-1 backpack
 
 
 
@@ -63,4 +64,8 @@ Topic3 recursion
     2. BNU 4033 42695 42696 --- Hanoi Tower
 
 
+Topic4 STL
 
+    1. UVA 10815 --- set
+
+    2. UVA 156 --- map
