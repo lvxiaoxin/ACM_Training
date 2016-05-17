@@ -69,3 +69,5 @@ Topic4 STL
     1. UVA 10815 --- set
 
     2. UVA 156 --- map
+
+    3. UVA 12096 --- stack + set_intersection set_union 
