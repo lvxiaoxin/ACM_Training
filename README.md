@@ -49,6 +49,8 @@ Topic1 bfs & dfs
 
     23. POJ 1324 --- bfs + status memory + bit operation
 
+    24. POJ 1077 --- Eight, classical,  bfs + Kantuo / A* + Kantup / IDA* (must do it)
+
 Topic2 dp
 
     1. BNU 1055 --- basic dp, mistake for dfs
@@ -71,3 +73,5 @@ Topic4 STL
     2. UVA 156 --- map
 
     3. UVA 12096 --- stack + set_intersection set_union 
+
+    4. UVA 540 --- double queue + map + set 
