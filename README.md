@@ -51,7 +51,7 @@ Topic1 bfs & dfs
 
     24. POJ 1077 --- Eight, classical,  bfs + Kantuo / A* + Kantup / IDA* (must do it)
 
-    25. POJ 2243 --- A* algorithm
+    25. POJ 2243 --- A* algorithm / bfs
 
 Topic2 dp
 

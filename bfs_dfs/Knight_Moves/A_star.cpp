@@ -50,8 +50,8 @@ int h(int x, int y)
 
     double a = abs(x-ex);
     double b = abs(y-ey);
-    double hv = sqrt(a*a + b*b);
-
+    //double hv = sqrt(a*a + b*b);
+    double hv = max(a, b);
     return (int)hv;
 }
 
