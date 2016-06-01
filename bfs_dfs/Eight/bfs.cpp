@@ -29,7 +29,7 @@ int vis[cell];
 int parent[cell];
 char step[cell];
 
-//Kantuo Base
+//cantor Base
 const int fac[] = {1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880};
 //dir
 const int dir[4][2] = {{-1, 0}, {1,0}, {0, -1}, {0, 1}}; //u, d, l, r

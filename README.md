@@ -59,6 +59,10 @@ Topic2 dp
 
     2. BNU 4183 --- basic 0-1 backpack
 
+    3. BNU 50925 --- basic dp
+
+    4. UVA 1025 --- basic dp + modeling, date init(prework)
+
 
 
 Topic3 recursion

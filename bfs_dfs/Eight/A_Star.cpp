@@ -25,7 +25,7 @@ const int MAXN = 1e5 + 3;
 
 const int cell = 362880;
 
-//Kantuo Base 
+//cantor Base 
 int fac[] = {1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880};
 
 int vis[cell];
