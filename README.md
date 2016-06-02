@@ -49,7 +49,7 @@ Topic1 bfs & dfs
 
     23. POJ 1324 --- bfs + status memory + bit operation
 
-    24. POJ 1077 --- Eight, classical,  bfs + Kantuo / A* + Kantup / IDA* (must do it)
+    24. POJ 1077 --- Eight, classical,  bfs + Cantor / A* + Cantor / IDA* (must do it)
 
     25. POJ 2243 --- A* algorithm / bfs
 
@@ -62,6 +62,8 @@ Topic2 dp
     3. BNU 50925 --- basic dp
 
     4. UVA 1025 --- basic dp + modeling, date init(prework)
+
+    4. UVA 437 --- skills to express & basic dp
 
 
 
