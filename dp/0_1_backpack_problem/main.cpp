@@ -3,7 +3,6 @@
  * P_ID: BNUOJ 4183
  * note: 基础01背包
  * date: 2016-5-15
- *
  */
 
 #include <cstdio>
@@ -37,7 +36,9 @@ int main()
     cin >> n >> c;
 
     for(int i=1; i<=n; ++i)
-        cin >> w[i] >> v[i];
+        cin >> v[i];
+    for(int i=1; i<=n; ++i)
+        cin >> w[i];
 
     for(int i=1; i<=n; ++i)
     {
@@ -45,7 +46,7 @@ int main()
         {
             dp[i][j] = dp[i-1][j];
             if(j>=w[i])
-                dp[i][c] = max(dp[i][c], dp[i-1][c-w[i]] + v[i]);
+               dp[i][j] = max(dp[i][j], dp[i-1][j-w[i]] + v[i]);
         }
     }
 
