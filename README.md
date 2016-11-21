@@ -1,7 +1,7 @@
 # ACM_Training
 Not for competion but for train and interest
 
-Topic1 bfs & dfs
+Topic1 Graph Theory
 
     1. HDU 1548 --- basic bfs
 
@@ -52,6 +52,8 @@ Topic1 bfs & dfs
     24. POJ 1077 --- Eight, classical,  bfs + Cantor / A* + Cantor / IDA* (must do it)
 
     25. POJ 2243 --- A* algorithm / bfs
+
+    26. HDU 1863 --- minimum spanning tree， prim or kruskal
 
 Topic2 dp
 
