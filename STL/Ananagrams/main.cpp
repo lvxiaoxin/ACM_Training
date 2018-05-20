@@ -1,6 +1,6 @@
 /**
  * Name: Ananagrams
- * note: STL map 
+ * note: STL map
  * date: 2016-0517
  * P_ID: UVA 156
  */
@@ -45,7 +45,7 @@ int main()
         if(s[0]=='#') break;
         words.push_back(s);
         string st = standStr(s);
-        if(!rec.count(st)) rec[st] = 0; 
+        if(!rec.count(st)) rec[st] = 0;
         rec[st]++;
     }
 
@@ -53,7 +53,7 @@ int main()
 
     for(int i=0; i<words.size(); ++i)
     {
-        if(rec[standStr(words[i])]==1) cout << words[i] << endl;  
+        if(rec[standStr(words[i])]==1) cout << words[i] << endl;
     }
 	return 0;
 }
