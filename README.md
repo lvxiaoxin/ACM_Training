@@ -1,5 +1,10 @@
 # ACM_Training
+
 Not for competion but for train and interest
+
+LeetCode sollutions: https://lvxiaoxin.github.io/2019/01/25/LeetCode-宝宝题解/
+
+<hr />
 
 Topic1 Graph Theory
 
