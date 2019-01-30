@@ -1,12 +1,19 @@
-# ACM_Training
+<img src="tree.png" align="right">
 
-Not for competion but for train and interest
+# Coding for Data Structure and Algorithm
 
-LeetCode sollutions: https://lvxiaoxin.github.io/2019/01/25/LeetCode-宝宝题解/
+## Agenda
 
-<hr />
+🎈 Not for competion, but for trainning and interests.
 
-Topic1 Graph Theory
+## Python3
+
+> You can find my LeetCode sollutions: https://lvxiaoxin.github.io/2019/01/25/LeetCode-宝宝题解/
+> Written in Python3 and described in Chinese.
+
+## C++
+
+### Topic1 Graph Theory
 
     1. HDU 1548 --- basic bfs
 
@@ -60,7 +67,7 @@ Topic1 Graph Theory
 
     26. HDU 1863 --- minimum spanning tree， prim or kruskal
 
-Topic2 dp
+### Topic2 dp
 
     1. BNU 1055 --- basic dp, mistake for dfs
 
@@ -72,16 +79,13 @@ Topic2 dp
 
     4. UVA 437 --- skills to express & basic dp
 
-
-
-Topic3 recursion
+### Topic3 recursion
 
     1. PKU 1664 --- not easy to think about
 
     2. BNU 4033 42695 42696 --- Hanoi Tower
 
-
-Topic4 STL
+### Topic4 STL
 
     1. UVA 10815 --- set
 
