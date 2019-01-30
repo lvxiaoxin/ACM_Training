@@ -2,7 +2,7 @@
 
 # Coding for Data Structure and Algorithm
 
-[![Language](https://img.shields.io/badge/language-python3.6+-blue.svg)](https://www.python.org/)   [![Language](https://img.shields.io/badge/language-C%2B%2B11-green.svg)](http://www.cplusplus.com/)
+[![Language](https://img.shields.io/badge/language-python3.6+-blue.svg)](https://www.python.org/)   [![Language](https://img.shields.io/badge/language-C%2B%2B11-orange.svg)](http://www.cplusplus.com/) [![license](https://img.shields.io/badge/license-MIT-green.svg)]()
 
 ## Agenda
 
