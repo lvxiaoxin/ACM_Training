@@ -1,4 +1,4 @@
-<img src="tree.png" align="right">
+<img src="tree.png" align="right" width=20% height=20%>
 
 # Coding for Data Structure and Algorithm
 
@@ -84,6 +84,7 @@
     1. PKU 1664 --- not easy to think about
 
     2. BNU 4033 42695 42696 --- Hanoi Tower
+
 
 ### Topic4 STL
 
