@@ -2,6 +2,8 @@
 
 # Coding for Data Structure and Algorithm
 
+[![Language](https://img.shields.io/badge/language-python3.6+-blue.svg)](https://www.python.org/)   [![Language](https://img.shields.io/badge/language-C%2B%2B11-green.svg)](http://www.cplusplus.com/)
+
 ## Agenda
 
 🎈 Not for competion, but for trainning and interests.
