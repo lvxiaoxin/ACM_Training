@@ -10,7 +10,7 @@
 
 ## Python3
 
-> You can find my LeetCode sollutions here: https://lvxiaoxin.github.io/2019/01/25/LeetCode-宝宝题解/
+> You can find my LeetCode sollutions here: (Wait for open)
 >
 > Written in Python3 and described in Chinese.
 
